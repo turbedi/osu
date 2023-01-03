@@ -147,7 +147,7 @@ namespace osu.Game.Beatmaps
             }
         }
 
-        protected override bool ShouldDeleteArchive(string path) => Path.GetExtension(path).ToLowerInvariant() == ".osz";
+        protected override bool ShouldDeleteArchive(string path) => Path.GetExtension(path).Equals(".osz", StringComparison.InvariantCultureIgnoreCase);
 
         protected override void Populate(BeatmapSetInfo beatmapSet, ArchiveReader? archive, Realm realm, CancellationToken cancellationToken = default)
         {

@@ -58,7 +58,7 @@ namespace osu.Game.Screens.Select
             set
             {
                 searchText = value;
-                SearchTerms = searchText.Split(' ', StringSplitOptions.RemoveEmptyEntries).ToArray();
+                SearchTerms = searchText.Split(' ', StringSplitOptions.RemoveEmptyEntries);
 
                 SearchNumber = null;
 
